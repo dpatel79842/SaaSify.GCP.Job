@@ -7,8 +7,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 
-
-def run_selenium_script2():
+def run_selenium_script2(secret_value):
+    data = json.loads(secret_value)
+    gcp_username = data['UserName']
+    gcp_password = data['Password']
     options = Options()
     options.add_experimental_option("detach", True)
 
@@ -24,11 +26,11 @@ def run_selenium_script2():
 
     driver.maximize_window()
 
-    ByXPathFillValue(driver, "//*[@id='identifierId']", config['username'])
+    ByXPathFillValue(driver, "//*[@id='identifierId']", gcp_username)
 
     ByXPathClick(driver, "//*[@id='identifierNext']/div/button")
 
-    ByXPathFillValue(driver, "//*[@id='password']/div[1]/div/div[1]/input", config['password'])
+    ByXPathFillValue(driver, "//*[@id='password']/div[1]/div/div[1]/input", gcp_password)
 
     time.sleep(config['timeout'])
 
