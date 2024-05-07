@@ -1,0 +1,15 @@
+{
+  "create offer": "//button[.=' Create Offer ']",
+  "input_username": "//*[@id='identifierId']",
+  "button_next": "//*[@id='identifierNext']/div/button",
+  "input_password": "//*[@id='password']/div[1]/div/div[1]/input",
+  "button_signin": "//*[@id='passwordNext']/div/button",
+  "input_type_checkbox": "input[type='checkbox']",
+  "input_type_text": "input[type='text']",
+  "input_type_file": "input[type='file']",
+  "save all": "//span[text()=' Save All ']",
+  "configure": "//button[.=' Configure ']",
+  "publish": "//span[text()=' Publish ']",
+  "installments": "//button[.=' Add installment ']",
+  "close": "//span[text()=' CLOSE ']"
+}
